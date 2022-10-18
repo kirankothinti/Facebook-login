@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  
+spring:
+  security: 
+    oauth2:
+      client:
+        registration:
+           facebook:
+              clientId: 1171315593591890
+              clientSecret: 7ee7274cf69c8a340f092ce8e993540e
+              accessTokenUri: https://graph.facebook.com/oauth/access_token
+              userAuthorizationUri: https://www.facebook.com/dialog/oauth
+              tokenName: oauth_token
+              authenticationScheme: query
+              clientAuthenticationScheme: form
+              resource:
+                 userInfoUri: https://graph.facebook.com/me
