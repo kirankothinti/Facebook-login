@@ -7,12 +7,57 @@ spring:
       client:
         registration:
            facebook:
+           
               clientId: 1171315593591890
               clientSecret: 7ee7274cf69c8a340f092ce8e993540e
-              accessTokenUri: https://graph.facebook.com/oauth/access_token
-              userAuthorizationUri: https://www.facebook.com/dialog/oauth
-              tokenName: oauth_token
-              authenticationScheme: query
-              clientAuthenticationScheme: form
-              resource:
-                 userInfoUri: https://graph.facebook.com/me
+#              scope:  r_liteprofile, r_emailaddress
+#              authorization-grant-type: authorization_code
+#              redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+#              client-name: Facebook
+#              client-authentication-method: post
+#              accessTokenUri: https://graph.facebook.com/oauth/access_token
+#              userAuthorizationUri: https://www.facebook.com/dialog/oauth
+#              tokenName: oauth_token
+#              authenticationScheme: query
+#              clientAuthenticationScheme: form
+#              resource:
+#                 userInfoUri: https://graph.facebook.com/me
+              
+                 
+           google:
+
+              clientId: 482091703527-ub5mcte8b6fqhcc5itafpcibib4uptsc.apps.googleusercontent.com
+              clientSecret: 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
+#             scope:  r_liteprofile, r_emailaddress
+              authorization-grant-type: authorization_code
+              redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+              client-name: Google
+              client-authentication-method: post
+#              userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
+#              accessTokenUri: https://oauth2.googleapis.com/token
+##             accessTokenUri: https://accounts.google.com/o/oauth2/auth
+#              tokenName: oauth_token
+#              authenticationScheme: query
+#              clientAuthenticationScheme: form
+#              resource:
+#                 userInfoUri: https://www.googleapis.com/oauth2/v1/certs
+#              response_type: code
+
+           linkedin:
+           
+             client-id: 86jlz7zq1f08ay
+             client-secret: A5WM0DXte8E0oaby
+             scope:  r_liteprofile, r_emailaddress
+             authorization-grant-type: authorization_code
+             redirect-uri: "{baseUrl}/auth/linkedin/callback"
+             client-name: LinkedIn
+             client-authentication-method: post
+
+        provider:
+          linkedin:
+            authorization-uri: https://www.linkedin.com/oauth/v2/authorization
+            token-uri: https://www.linkedin.com/uas/oauth2/accessToken
+            user-info-uri: https://api.linkedin.com/v2/me
+#            jwk-set-uri:
+#            user-name-attribute: id
+                

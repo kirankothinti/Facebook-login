@@ -16,11 +16,24 @@
 <body>
 	<h1 class="m-5">Welcome to Spring Boot Application</h1>
 
-	<div class="container authenticated">
-		<a href="oauth2/authorization/facebook" type="submit" class="btn btn-lg btn-success"
-			style="align : center">Continue with Facebook</a>
+	<div class=sociallogins>
+		<div class="container authenticated">
+			<a href="oauth2/authorization/facebook" type="submit" class="btn btn-lg btn-success"
+				style="align : center">Continue with Facebook</a>
+		</div>
+		<br>
+		<div class="container authenticated">
+			<a href="oauth2/authorization/google" type="submit" class="btn btn-lg btn-success"
+				style="align : center">Continue with Google</a>
+		</div>
 
+		<br>
+		<div class="container authenticated">
+			<a href="oauth2/authorization/linkedin" type="submit" class="btn btn-lg btn-success"
+				style="align : center">Continue with LinkedIn</a>
+		</div>
 	</div>
+
 	<div class="container unauthenticated" style="display:none">
 		<h2> Logged in as: <span id="user" class="text-primary"></span></h2>
 	</div>
